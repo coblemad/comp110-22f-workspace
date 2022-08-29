@@ -1,14 +1,14 @@
 """EX01 - Chardle - A cute step toward Wordle."""
 __author__ = "730544275"
 
-word: str = str(input("Enter a 5-character word "))
+word: str = str(input("Enter a 5-character word: "))
 if len(word) > 5:
     print("Error: Word must contain 5 characters")
     exit()
 if len(word) < 5:
     print("Error: Word must contain 5 characters")
     exit()
-character: str = str(input("Enter a single character "))
+character: str = str(input("Enter a single character: "))
 if len(character) > 1:
     print("Error: Character must be a single character.")
     exit()
