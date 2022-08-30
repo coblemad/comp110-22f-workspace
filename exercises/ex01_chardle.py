@@ -34,8 +34,8 @@ if character == word[4]:
     print(character + " found at index 4")
     count = count + 1
 if count == 1:
-    print(str(count) + " instance of " + character + " found in " + word )
+    print(str(count) + " instance of " + character + " found in " + word)
 if count == 0:
-    print("No instances of " + character + " found in " + word )
+    print("No instances of " + character + " found in " + word)
 if count > 1:
-    print(str(count) + " instances of " + character + " found in " + word )
+    print(str(count) + " instances of " + character + " found in " + word)
