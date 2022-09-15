@@ -34,22 +34,28 @@ def emojified (guess_word: str, answer: str) -> str:
 
 def input_guess (expected_length: int) -> str:
     """A function that checks a word for the length given a certain amount of characters."""
-    guess_word: str = input(f"Enter a {expected_length} word: ")
+    guess_word: str = input(f"Enter a {expected_length} letter word: ")
     while len(guess_word) != expected_length:
         if len(guess_word) > expected_length or len(guess_word) < expected_length:
             guess_word = input(f"That wasn't {expected_length} chars! Try again. ")
     return guess_word
 
 def main() -> None: 
- """The entrypoint of the program and main game loop."""
- turns: int = 6
- while turns <= 6:
-    print("=== Turn " + turns + "/" + "6" + "=== ")
-    if input_guess(guess_word) == True:
-        return emojified(guess_word, answer)
-    i -= 1
+    """The entrypoint of the program and main game loop."""
+    answer: str = "codes"
+    guess_word: str = " "
+    count: int = 1
+    while guess_word != answer: 
+        print(f"=== Turn {count}/6 ===")
+        guess = input_guess(len(answer))
+        print(emojified(guess_word, answer))
+        if count <= 6 and guess_word != answer:
+            count += 1
+        if count >= 1 and guess_word == answer:
+            print(f"You won in {count} turns! ")
+            guess_word = answer
+        if count == 7:
+            print("X/6 - Sorry, try again tomorrow! ")
 
 if __name__ == "__main__":
     main()
-
-     
