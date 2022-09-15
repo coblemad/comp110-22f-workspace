@@ -1,10 +1,6 @@
 """EX03 - Structured Wordle"""
 __author__ = "730544275"
 
-from re import I
-
-
-answer = "codes"
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
@@ -37,7 +33,7 @@ def emojified (guess_word: str, answer: str) -> str:
 
 def input_guess (expected_length: int) -> str:
     """A function that checks a word for the length given a certain amount of characters."""
-    guess_word: str = input(f"Enter a {expected_length} letter word: ")
+    guess_word: str = input(f"Enter a {expected_length} character word: ")
     while len(guess_word) != expected_length:
         if len(guess_word) > expected_length or len(guess_word) < expected_length:
             guess_word = input(f"That wasn't {expected_length} chars! Try again. ")
@@ -45,21 +41,24 @@ def input_guess (expected_length: int) -> str:
 
 def main() -> None: 
     """The entrypoint of the program and main game loop."""
-    answer: str = "codes"
-    guess_word: str = " "
+    secret: str = "codes"
+    guess_word: str = ""
     count: int = 1
-    while guess_word != answer: 
+    while guess_word != secret: 
         print(f"=== Turn {count}/6 ===")
-        guess_word = input_guess(len(answer))
-        if count <= 6 and guess_word != answer:
-            print(emojified(guess_word, answer))
+        guess_word = input_guess(len(secret))
+        print(emojified(guess_word, secret))
+        if count <= 6 and guess_word != secret:
             count += 1
-        if count >= 1 and guess_word == answer:
-            print(emojified(guess_word, answer))
-            print(f"You won in {count} turns! ")
-            guess_word = answer
+        if count >= 1 and guess_word == secret:
+            print(f"You won in {count}/6 turns! ")
+            guess_word = secret
+            return secret
         if count == 7:
             print("X/6 - Sorry, try again tomorrow! ")
+            guess_word = secret
+            return secret
+             
 
 if __name__ == "__main__":
     main()
