@@ -1,6 +1,9 @@
 """EX03 - Structured Wordle"""
 __author__ = "730544275"
 
+from re import I
+
+
 answer = "codes"
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
@@ -47,11 +50,12 @@ def main() -> None:
     count: int = 1
     while guess_word != answer: 
         print(f"=== Turn {count}/6 ===")
-        guess = input_guess(len(answer))
-        print(emojified(guess_word, answer))
+        guess_word = input_guess(len(answer))
         if count <= 6 and guess_word != answer:
+            print(emojified(guess_word, answer))
             count += 1
         if count >= 1 and guess_word == answer:
+            print(emojified(guess_word, answer))
             print(f"You won in {count} turns! ")
             guess_word = answer
         if count == 7:
