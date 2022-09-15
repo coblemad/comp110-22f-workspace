@@ -36,11 +36,12 @@ def emojified (guess_word: str, answer: str) -> str:
 guess_word: str = ""
 """A function that checks a word for the length given a certain amount of characters."""
 def input_guess (expected_length: int) -> int:
-    print("Enter a " + (expected_length) + "character word: " + input(guess_word))
-    if len(guess_word) == len(answer):
-        return guess_word
+    print("Enter a " + (expected_length) + "character word: " + guess_word)
+    while len(guess_word) >= expected_length:
+        if len(guess_word) == len(answer):
+            return guess_word
     else:
-        return ("That wasn't " + expected_length + "chars! ")
+        print("That wasn't " + expected_length + "chars! Try again ")
 
 def main() -> None: 
  """The entrypoint of the program and main game loop."""
