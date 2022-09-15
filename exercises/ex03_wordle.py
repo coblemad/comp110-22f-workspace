@@ -35,7 +35,7 @@ def emojified (guess_word: str, answer: str) -> str:
 
 guess_word: str = ""
 """A function that checks a word for the length given a certain amount of characters."""
-def input_guess (expected_length: int) -> str:
+def input_guess (expected_length: int) -> int:
     print("Enter a " + (expected_length) + "character word: " + input(guess_word))
     if len(guess_word) == len(answer):
         return guess_word
