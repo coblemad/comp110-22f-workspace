@@ -1,9 +1,11 @@
-"""EX03 - Structured Wordle"""
+"""EX03 - Structured Wordle."""
 __author__ = "730544275"
 
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
+
+
 def contains_char (guess_word: str, guess_character: str) -> bool:
     """A function that searches for a character in a word given by the user."""
     assert len(guess_character) == 1
