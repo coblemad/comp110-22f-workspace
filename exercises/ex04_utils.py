@@ -13,6 +13,7 @@ def all(my_list: list[int], guess_number: int) -> bool:
         i += 1
     return True
 
+
 def max(input: list[int]) -> int:
     """A function that returns a maximum in a list of ints."""
     if len(input) == 0:
@@ -20,12 +21,13 @@ def max(input: list[int]) -> int:
     i: int = 0
     max_check: int = input[0]
     while i < len(input):
-        if input[i] > max_check:
-            max_check == input[i]
+        if input[i] >= max_check:
+            max_check = input[i]
             i += 1
         else:
             i += 1
     return max_check
+
 
 def is_equal(first_list: list[int], second_list: list[int]) -> bool:
     """Given two list of int values, returns True if every element of at every index is equal in both lists."""
