@@ -14,7 +14,6 @@ def max(input: list[int]) -> int:
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     
-
 def is_equal(first_list: list[int], second_list: list[int]) -> bool:
     """Given two list of int values, returns True if every element of at every index is equal in both lists."""
     i: int = 0
