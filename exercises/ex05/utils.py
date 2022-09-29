@@ -36,7 +36,7 @@ def sub(a_list: list[int], first_num: int, second_num: int) -> int:
         ending_place: int = len(a_list)
     else:
         ending_place = second_num
-    if len(a_list) == 0 or starting_place > len(a_list) or ending_place <= 0:
+    if len(a_list) == 0 or starting_place > len(a_list) or ending_place <= 0 or starting_place == len(a_list):
         return []
     new_list.append(a_list[starting_place])
     new_list.append(a_list[ending_place - 1])
