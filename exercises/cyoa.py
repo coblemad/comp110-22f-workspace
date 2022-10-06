@@ -18,25 +18,25 @@ def main() -> None:
     if proceed == 1: 
         points = points + 2
         print(f"Goodbye, you earned {points} adventure points.")
-        restart: str = input(ICE_CREAM + "Would you like to restart the quiz? (Answer Yes or No.) " )
+        restart: str = input(ICE_CREAM + "Would you like to restart the quiz? - Answer Yes or No. ")
         if restart == "Yes" or "yes":
             main()
         return
     if proceed == 2:
         quiz()
     if proceed == 3: 
-        fav_ice_cream: str = str(input(f"Hey, {player}! Do you enjoy eating ice cream? (Answer Yes or No.) "))
+        fav_ice_cream: str = (input(f"Hey, {player}! Do you enjoy eating ice cream? (Answer Yes or No.) "))
         if fav_ice_cream == "Yes" or "yes":
             points = points + 5
             print(f"There are a lot of great spots on Franklin street to enjoy right by campus. I reccomend YoPo for frozen yogurt, Ben and Jerry's for a super sweet treat, or Insomnia Cookies for an ice-cream/cookie sandwich! You increased your adventure points to {points} for learning about ice cream nearby. Goodbye! ")
-            restart: str = input(ICE_CREAM + "Would you like to restart the quiz? (Answer Yes or No.) " )
+            restart: str = input(ICE_CREAM + "Would you like to restart the quiz? - Answer Yes or No. ")
             if restart == "Yes" or "yes":
                 main()
             return
         else:
             points = points + 2
             print(f"Sorry you do not like ice cream. There are a lot of other sweet options, such as boba at YaYa or cookies at Crumbl. Hope you find something yummy. Have a nice day! You increased your adventure points to {points} for reading about sweet treats. Goodbye!")
-            restart: str = input(ICE_CREAM + "Would you like to restart the quiz? (Answer Yes or No.) " )
+            restart: str = input(ICE_CREAM + "Would you like to restart the quiz? (Answer Yes or No.) ")
             if restart == "Yes" or "yes":
                 main()
             return
@@ -55,8 +55,8 @@ def greet() -> None:
 
 
 def quiz() -> None:
-    global points
     """A function that gives the quiz itself in the function."""
+    global points
     print("Now it is time to start the quiz. If a statement describes you, type Yes to it. Please only choose one statement to type Yes to. Type No next to the other qualities that are not your choice. ")
     question_one: str = input("1: You enjoy the classics, whether it's music, clothing, cars, etc. ")
     question_two: str = input("2: You have a bubbly personality and others would describe you as outgoing. ")
@@ -66,7 +66,7 @@ def quiz() -> None:
     if question_one == "Yes" or question_one == "yes":
         points = points + 5
         print(f"You are vanilla! Your adventure points have increased to {points} for playing. ")
-        restart: str = input(ICE_CREAM + "Would you like to restart the quiz? (Answer Yes or No.) " )
+        restart: str = input(ICE_CREAM + "Would you like to restart the quiz? - Answer Yes or No. ")
         if restart == "Yes" or restart == "yes":
             main()
         else:
@@ -75,7 +75,7 @@ def quiz() -> None:
     if question_two == "Yes" or question_two == "yes":
         points = points + 5
         print(f"You are strawberry! Your adventure points have increased to {points} for playing. ")
-        restart: str = input(ICE_CREAM + "Would you like to restart the quiz? (Answer Yes or No.) " )
+        restart: str = input(ICE_CREAM + "Would you like to restart the quiz? - Answer Yes or No. ")
         if restart == "Yes" or restart == "yes":
             main()
         else:
@@ -84,7 +84,7 @@ def quiz() -> None:
     if question_three == "Yes" or question_three == "yes":
         points = points + 5
         print(f"You are red velvet! Your adventure points have increased to {points} for playing. ")
-        restart: str = input(ICE_CREAM + "Would you like to restart the quiz? (Answer Yes or No.) " )
+        restart: str = input(ICE_CREAM + "Would you like to restart the quiz? - Answer Yes or No. ")
         if restart == "Yes" or restart == "yes":
             main()
         else:
@@ -93,7 +93,7 @@ def quiz() -> None:
     if question_four == "Yes" or question_four == "yes":
         points = points + 5
         print(f"You are brownie batter! Your adventure points have increased to {points} for playing. ")
-        restart: str = input(ICE_CREAM + "Would you like to restart the quiz? (Answer Yes or No.) " )
+        restart: str = input(ICE_CREAM + "Would you like to restart the quiz? - Answer Yes or No. ")
         if restart == "Yes" or restart == "yes":
             main()
         else:
@@ -102,7 +102,7 @@ def quiz() -> None:
     if question_five == "Yes" or question_five == "yes":
         points = points + 5
         print(f"You are chocolate chip cookie dough! Your adventure points have increased to {points} for playing. ")
-        restart: str = input(ICE_CREAM + "Would you like to restart the quiz? (Answer Yes or No.) " )
+        restart: str = input(ICE_CREAM + "Would you like to restart the quiz? - Answer Yes or No. ")
         if restart == "Yes" or restart == "yes":
             main()
         else:
@@ -111,4 +111,4 @@ def quiz() -> None:
     
 
 if __name__ == "__main__":
-  main()
+    main()
