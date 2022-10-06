@@ -2,11 +2,13 @@
 __author__ = "730544275"
 
 
+import random
+
+
 player: str = ""
-points: int
+points: int = 0
 ICE_CREAM: str = "\U0001F368"
 NAMED_CONSTANT: str = "\U00000000"
-import random
 
 
 def main() -> None:
@@ -108,7 +110,7 @@ def quiz() -> None:
         else:
             print(ICE_CREAM)
             return
-    
+
 
 if __name__ == "__main__":
     main()
