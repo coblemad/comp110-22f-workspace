@@ -16,7 +16,7 @@ def main() -> None:
     global points
     greet()
     points = 0
-    proceed = int(input("Please type in the number to choose an option for how you want to proceed. 1 leads you out of the game, 2 takes you right to the quiz, and 3 gives you a list of the best ice cream on Franklin Street to enjoy while you are taking your quiz. "))
+    proceed: int = input("Please type in the number to choose an option for how you want to proceed. 1 leads you out of the game, 2 takes you right to the quiz, and 3 gives you a list of the best ice cream on Franklin Street to enjoy while you are taking your quiz. ")
     if proceed == 1: 
         points = points + 2
         print(f"Goodbye, you earned {points} adventure points.")
