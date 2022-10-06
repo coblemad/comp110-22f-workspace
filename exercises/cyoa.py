@@ -27,7 +27,7 @@ def main() -> None:
     if proceed == 2:
         quiz()
     if proceed == 3: 
-        fav_ice_cream: str = (input(f"Hey, {player}! Do you enjoy eating ice cream? (Answer Yes or No.) "))
+        fav_ice_cream: str = input(f"Hey, {player}! Do you enjoy eating ice cream? - Answer Yes or No. ")
         if fav_ice_cream == "Yes" or "yes":
             points = points + 5
             print(f"There are a lot of great spots on Franklin street to enjoy right by campus. I reccomend YoPo for frozen yogurt, Ben and Jerry's for a super sweet treat, or Insomnia Cookies for an ice-cream/cookie sandwich! You increased your adventure points to {points} for learning about ice cream nearby. Goodbye! ")
@@ -38,12 +38,12 @@ def main() -> None:
         else:
             points = points + 2
             print(f"Sorry you do not like ice cream. There are a lot of other sweet options, such as boba at YaYa or cookies at Crumbl. Hope you find something yummy. Have a nice day! You increased your adventure points to {points} for reading about sweet treats. Goodbye!")
-            restart: str = input(ICE_CREAM + "Would you like to restart the quiz? (Answer Yes or No.) ")
+            restart: str = input(ICE_CREAM + "Would you like to restart the quiz? - Answer Yes or No.) ")
             if restart == "Yes" or "yes":
                 main()
             return
     print("Now, the wheel is spinning to increase your points by a bonus number! ")
-    wheel = random.randint(1, 10)
+    wheel: int = random.randint(1, 10)
     points = points + wheel
     print(f"Your final number of adventure points is {points}. Thanks for playing!")
 
