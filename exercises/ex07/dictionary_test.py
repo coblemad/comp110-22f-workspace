@@ -2,13 +2,13 @@
 __author__ = "730544275"
 
 
-from exercises.ex07.dictionary import invert, favorite_color, count
+from dictionary import invert, favorite_color, count
 
 
 def test_invert_use1() -> None:
     """Tests the first use case for the invert function to see if it changes the of letters as commanded."""
     my_numbers = ({'b': 'c', 'r': 'x', 'y': 'z'})
-    assert invert(my_numbers) == {'c': 'b', 'x':'r', 'z': 'y'}
+    assert invert(my_numbers) == {'c': 'b', 'x': 'r', 'z': 'y'}
 
 
 def test_invert_use2() -> None:
