@@ -25,7 +25,7 @@ def test_invert_edge() -> None:
 
 def test_favorite_color_use1() -> None:
     """Tests the first use case for the favorite_color function to see if it returns the correct color."""
-    color_list = ({"Madelyn": "pink", "Molly": "yellow", "Leah": "red", "Alaina": "pink"})
+    color_list = ({"Madelyn": "pink", "Molly": "yellow", "Leah": "yellow", "Alaina": "pink"})
     assert favorite_color(color_list) == "pink"
 
 

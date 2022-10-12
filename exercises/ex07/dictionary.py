@@ -7,7 +7,7 @@ def invert(my_numbers: dict[str, str]) -> dict[str, str]:
     """Function that inverts the keys and the values."""
     result: dict[str, str] = {}
     for key in my_numbers:
-        if key in result:
+        if my_numbers[key] in result:
             raise KeyError("Cannot have duplicate keys in resulting list.")
         else:
             result[my_numbers[key]] = key
@@ -28,7 +28,7 @@ def favorite_color(color_list: dict[str, str]) -> str:
         if new_dict[key] > color_counter:
             color_counter = new_dict[key]
             result = key
-    return key
+    return result
     
 
 def count(my_list: list[str]) -> dict[str, int]:
