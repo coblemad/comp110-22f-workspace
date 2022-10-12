@@ -31,9 +31,8 @@ def favorite_color(color_list: dict[str, str]) -> str:
     return key
     
 
-
 def count(my_list: list[str]) -> dict[str, int]:
-    """A function that returns a dictionary that counts eash of the items in the input list. """
+    """A function that returns a dictionary that counts eash of the items in the input list."""
     result: dict[str, int] = {}
     for key in my_list:
         if key in result:
