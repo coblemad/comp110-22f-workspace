@@ -43,16 +43,16 @@ def test_favorite_color_edge() -> None:
 def test_count_use1() -> None: 
     """Tests the first use case for the count function to see if it counts correctly."""
     xs: list("Slay", "Slay", "Slay")
-    assert count(xs) == ("Slay": 3)
+    assert count(xs) == [{"Slay": 3}]
 
 
 def test_count_use2() -> None: 
     """Tests the second use case for the count function to see if it counts one word correctly."""
     xs: list("Material", "girl")
-    assert count(xs) == ("Material": 1, "girl": 1)
+    assert count(xs) == [{"Material": 1, "girl": 1}]
 
 
 def test_count_edge() -> None: 
     """Tests the edge case for the count function to see if it returns an empty list."""
     xs:  list()
-    assert count(xs) == ()
+    assert count(xs) == [{}]
